@@ -10,13 +10,15 @@
  * @license http://opensource.org/licenses/lgpl-3.0.html GNU Lesser General Public License
  */
 
+namespace PSL;
+
 /**
  * This class represents certificates.
  *
  * @author Kai Sellgren
  * @since 1.00
  */
-class Security_Certificate
+class Certificate
 {
 	private $csr;
 	private $keyPair;
