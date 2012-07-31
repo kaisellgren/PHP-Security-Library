@@ -1,0 +1,6 @@
+
+ PHP Security Library testing
+
+1. Setup PHPUnit
+ - Download and install PHPUnit (http://www.phpunit.de/).
+ - Add PHPUnit installation folder into include_path (http://www.php.net/manual/en/ini.core.php#ini.include-path)
