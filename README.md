@@ -7,7 +7,7 @@ This library provides you a handful set of useful helper methods and classes rel
 
 ##### Encrypt data securely.
 
-```
+```php
 use \PSL\Encrypter;
 
 $confidentalText = 'I am using PSL';
@@ -24,7 +24,7 @@ $plainText = Encrypter::decrypt($cipherText, $key);
 
 ##### Generate strong random data.
 
-```
+```php
 use \PSL\Randomizer;
 
 $data = Randomizer::getRandomBytes(32); // 32 bytes.
@@ -36,7 +36,7 @@ Things like [random float generation](https://github.com/kaisellgren/PHP-Securit
 
 ##### Generate a certificate.
 
-```
+```php
 use \PSL\KeyPair;
 use \PSL\Certificate;
 
