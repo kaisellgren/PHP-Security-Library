@@ -12,7 +12,7 @@ use \PSL\Encrypter;
 
 $confidentalText = 'I am using PSL';
 
-$cipherText = Encrypter::encrypt(MCRYPT_RIJNDAEL_256, $confidentalText);
+$cipherText = Encrypter::encrypt(MCRYPT_RIJNDAEL_128, $confidentalText);
 
 // $cipherText is an instance of \PSL\CipherText.
 // To extract, do something like this:
