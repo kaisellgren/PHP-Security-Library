@@ -263,21 +263,21 @@ class Randomizer
 			$source = mt_rand();
 
 			// In addition to the Mersenne Twister, we use a good old Linear Congruential Generator.
-			$source += bcmul(lcg_value(), pow(2, 52));
+			$source += bcmul(lcg_value(), pow(2, 52)) & 0xFF;
 
 			// µ-second is a non-random number.
 			$usec = explode('.', microtime(true));
 			end($usec);
-			$source += (int) $usec;
+			$source += (int) $usec & 0xFF;
 
 			// This is pretty predictable, but is somewhat non-deterministic.
-			$source += memory_get_usage();
+			$source += memory_get_usage() & 0xFF;
 
 			// Same as above, lacks of unpredictability.
-			$source += getmypid();
+			$source += getmypid() & 0xFF;
 
 			// Let's make it a byte.
-			$random .= chr($source % 255);
+			$random .= chr($source % 256);
 		}
 
 		return (binary) $random;
